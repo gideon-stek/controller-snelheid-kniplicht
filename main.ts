@@ -24,7 +24,7 @@ WSJoyStick.JoyStickInit()
 radio.setGroup(107)
 basic.forever(function () {
     if (WSJoyStick.Listen_Dir(DIR.U)) {
-        radio.sendValue("Up", 1)
+        radio.sendNumber(1)
         basic.showLeds(`
             . . # . .
             . # # # .
@@ -33,7 +33,7 @@ basic.forever(function () {
             . . # . .
             `)
     } else if (WSJoyStick.Listen_Dir(DIR.D)) {
-        radio.sendValue("Down", 1)
+        radio.sendNumber(2)
         basic.showLeds(`
             . . # . .
             . . # . .
@@ -42,7 +42,7 @@ basic.forever(function () {
             . . # . .
             `)
     } else if (WSJoyStick.Listen_Dir(DIR.L)) {
-        radio.sendValue("Left", 1)
+        radio.sendNumber(3)
         basic.showLeds(`
             . . # . .
             . # . . .
@@ -51,7 +51,7 @@ basic.forever(function () {
             . . # . .
             `)
     } else if (WSJoyStick.Listen_Dir(DIR.R)) {
-        radio.sendValue("Right", 1)
+        radio.sendNumber(4)
         basic.showLeds(`
             . . # . .
             . . . # .
@@ -60,7 +60,7 @@ basic.forever(function () {
             . . # . .
             `)
     } else if (WSJoyStick.Listen_Dir(DIR.U_R)) {
-        radio.sendValue("Up right", 1)
+        radio.sendNumber(5)
         basic.showLeds(`
             . # # # #
             . . . # #
@@ -69,7 +69,7 @@ basic.forever(function () {
             # . . . .
             `)
     } else if (WSJoyStick.Listen_Dir(DIR.U_L)) {
-        radio.sendValue("Up left", 1)
+        radio.sendNumber(6)
         basic.showLeds(`
             # # # # .
             # # . . .
@@ -78,7 +78,7 @@ basic.forever(function () {
             . . . . #
             `)
     } else if (WSJoyStick.Listen_Dir(DIR.D_R)) {
-        radio.sendNumber(5)
+        radio.sendNumber(7)
         basic.showLeds(`
             # . . . .
             . # . . #
@@ -87,7 +87,7 @@ basic.forever(function () {
             . # # # #
             `)
     } else if (WSJoyStick.Listen_Dir(DIR.D_L)) {
-        radio.sendNumber(6)
+        radio.sendNumber(8)
         basic.showLeds(`
             . . . . #
             # . . # .
